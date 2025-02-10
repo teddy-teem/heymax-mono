@@ -1,0 +1,13 @@
+export default {
+    presets: ["next/babel"],
+    plugins: [
+      [
+        "module-resolver",
+        {
+          alias: {
+            "react-native": "react-native-web",
+          },
+        },
+      ],
+    ],
+  };
