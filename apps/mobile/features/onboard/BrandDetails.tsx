@@ -2,7 +2,7 @@ import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 import BrandLogo from "@/assets/images/brand-logo";
 import UniverseImage from "@/assets/images/universe";
-import { COLORS, Typography } from "@repo/ui";
+import { COLORS, Typography } from "@heymax/ui";
 import { scale } from "react-native-size-matters";
 
 const BrandDetails = (): React.ReactNode => {
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "column",
     gap: scale(32),
-    marginTop: scale(100),
+    marginTop: scale(120),
   },
   content: { justifyContent: "center", alignItems: "center" },
   contentHeading1: { color: COLORS.default.secondary },

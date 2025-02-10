@@ -1,7 +1,7 @@
 import { Link, Stack } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
 
-import { Typography } from '@repo/ui';
+import { Typography } from '@heymax/ui';
 
 export default function NotFoundScreen() {
   return (

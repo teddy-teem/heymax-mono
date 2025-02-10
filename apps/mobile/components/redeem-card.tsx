@@ -6,7 +6,7 @@ import {
   StyleSheet,
 } from "react-native";
 import React from "react";
-import { COLORS, Typography } from "@repo/ui";
+import { COLORS, Typography } from "@heymax/ui";
 import {scale} from "react-native-size-matters"
 
 export interface RedeemCardProp {

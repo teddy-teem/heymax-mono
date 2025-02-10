@@ -1,6 +1,6 @@
 import { View, StyleSheet, Alert } from "react-native";
 import React from "react";
-import { COLORS, Button, Typography, Pagination } from "@repo/ui";
+import { COLORS, Button, Typography, Pagination } from "@heymax/ui";
 import { CarouselItem } from "@/app/(onboard)";
 import RightArrowIcon from "@/assets/icons/right-arrow";
 import { scale } from "react-native-size-matters";

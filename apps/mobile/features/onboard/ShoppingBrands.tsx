@@ -1,6 +1,6 @@
 import { View, StyleSheet, Dimensions } from "react-native";
 import React from "react";
-import { NeonCircle, HorizontalLine, Typography, Chip } from "@repo/ui";
+import { NeonCircle, HorizontalLine, Typography, Chip } from "@heymax/ui";
 import ImageGrid from "../../components/GridView";
 import { scale } from "react-native-size-matters";
 import QuickActions from "@/components/quick-actions";

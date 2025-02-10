@@ -1,4 +1,4 @@
-import { COLORS } from "@repo/ui";
+import { COLORS } from "@heymax/ui";
 import { Stack } from "expo-router";
 import React from "react";
 

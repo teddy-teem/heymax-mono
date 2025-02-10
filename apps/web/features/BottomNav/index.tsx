@@ -1,6 +1,6 @@
 import React from "react";
 
-import { COLORS } from "@repo/ui";
+import { COLORS } from "@heymax/ui";
 import Pagination from "../../components/Pagination";
 
 interface BottomNavigationProps {

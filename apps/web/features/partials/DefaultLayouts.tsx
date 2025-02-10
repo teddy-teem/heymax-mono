@@ -1,4 +1,4 @@
-import { COLORS } from "@repo/ui";
+import { COLORS } from "@heymax/ui";
 import React from "react";
 
 export default function DefaultLayouts({

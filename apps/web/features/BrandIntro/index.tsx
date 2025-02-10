@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { COLORS, HorizontalLine, Typography } from "@repo/ui";
+import { COLORS, HorizontalLine, Typography } from "@heymax/ui";
 
 export default function index() {
   return (

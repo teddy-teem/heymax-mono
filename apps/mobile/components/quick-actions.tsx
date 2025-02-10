@@ -1,4 +1,4 @@
-import { Chip } from '@repo/ui';
+import { Chip } from '@heymax/ui';
 import React, { useState } from 'react';
 import {
   TouchableOpacity,

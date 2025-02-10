@@ -1,6 +1,6 @@
 import { View, StyleSheet, Dimensions, TouchableOpacity, Alert } from "react-native";
 import React from "react";
-import { NeonCircle, HorizontalLine, Typography } from "@repo/ui";
+import { NeonCircle, HorizontalLine, Typography } from "@heymax/ui";
 import { FlashList } from "@shopify/flash-list";
 import { scale } from "react-native-size-matters";
 import RedeemCard from "@/components/redeem-card";
