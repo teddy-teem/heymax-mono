@@ -1,4 +1,4 @@
-import { View, StyleSheet, Dimensions, TouchableOpacity } from "react-native";
+import { View, StyleSheet, Dimensions, TouchableOpacity, Alert } from "react-native";
 import React from "react";
 import { NeonCircle, HorizontalLine, Typography } from "@repo/ui";
 import { FlashList } from "@shopify/flash-list";
@@ -32,6 +32,7 @@ const redeems = [
 ];
 
 const RedeemPage = (): React.ReactNode => {
+
   return (
     <View style={[styles.container]}>
       <View style={styles.neonLine}>

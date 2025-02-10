@@ -1,4 +1,4 @@
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Alert } from "react-native";
 import React from "react";
 import { COLORS, Button, Typography, Pagination } from "@repo/ui";
 import { CarouselItem } from "@/app/(onboard)";
@@ -11,17 +11,18 @@ interface IProps {
   onNext: () => void;
 }
 
+
 export default function BottomNavigation({
   paginationIndex,
   items,
   onNext,
 }: IProps) {
+
+
   return (
     <View style={[styles.container]}>
       <Pagination paginationIndex={paginationIndex} items={items} />
-      <Button
-        onPress={onNext}
-      >
+      <Button onPress={onNext}>
         <View style={[styles.buttonChild]}>
           <Typography variant="h3" style={styles.buttonText}>
             {items[paginationIndex].instruction}

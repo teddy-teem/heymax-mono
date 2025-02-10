@@ -6,7 +6,18 @@ import BottomNavigation from "@/components/BottomNavigation";
 import BrandDetails from "@/features/onboard/BrandDetails";
 import ShoppingBrands from "@/features/onboard/ShoppingBrands";
 import RedeemPage from "@/features/onboard/RedeemPage";
+import * as WebBrowser from "expo-web-browser";
+
 const width: number = Dimensions.get("window").width;
+
+const URL = "https://heymax.ai";
+const openInAppBrowser = async () => {
+  try {
+    await WebBrowser.openBrowserAsync(URL);
+  } catch (error) {
+    console.error("Error opening in-app browser:", error);
+  }
+};
 
 export interface CarouselItem {
   id: number;
@@ -32,9 +43,6 @@ const carouselData: CarouselItem[] = [
 interface CarouselProps {}
 
 const Index: React.FC<CarouselProps> = () => {
-
-
-
   const carouselRef = React.useRef<any>(null);
   const [currentIndex, setCurrentIndex] = React.useState<number>(0);
 
@@ -65,7 +73,6 @@ const Index: React.FC<CarouselProps> = () => {
           onSnapToItem={(index: number): void => {
             setCurrentIndex(index);
           }}
-          // enabled={false}
           renderItem={renderItem}
         />
       </View>
@@ -73,7 +80,7 @@ const Index: React.FC<CarouselProps> = () => {
         paginationIndex={currentIndex}
         items={carouselData}
         onNext={() => {
-          handleNext();
+          currentIndex === 2 ? openInAppBrowser() : handleNext();
         }}
       />
     </View>
