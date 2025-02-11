@@ -1,5 +1,5 @@
 export default {
-    presets: ["next/babel"],
+    presets: ["next/babel", "module:metro-react-native-babel-preset"],
     plugins: [
       [
         "module-resolver",
@@ -8,6 +8,7 @@ export default {
             "react-native": "react-native-web",
           },
         },
+        'react-native-reanimated/plugin'
       ],
     ],
   };

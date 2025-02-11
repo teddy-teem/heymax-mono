@@ -17,6 +17,8 @@ export const Button: React.FC<ButtonProps> = function ({ children, onPress }) {
         paddingLeft: 20,
         paddingRight: 20,
         borderRadius: 30,
+        border: 'none', 
+        cursor: "pointer"
       }}
       onClick={onPress}
     >

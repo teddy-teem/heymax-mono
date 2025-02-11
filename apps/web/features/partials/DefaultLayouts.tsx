@@ -11,7 +11,7 @@ export default function DefaultLayouts({
       style={{   
         backgroundColor: COLORS.default.background,
         maxWidth: "720px",
-        minWidth: "500px",
+        minWidth: "720px",
         height: "100%"
       }}
     >

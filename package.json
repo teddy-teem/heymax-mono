@@ -6,9 +6,9 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "install:apps": "yarn workspace web install && yarn workspace mobile install && yarn workspace ui install",
+    "install:packages": "yarn install && yarn workspace web install && yarn workspace mobile install && yarn workspace @heymax/ui install",
     "start": "concurrently \"yarn workspace web dev\" \"yarn workspace mobile start\"",
-    "clean:modules": "rm -rf node_modules apps/web/node_modules apps/mobile/node_modules packages/ui/node_modules && yarn cache clean"
+    "clean:modules": "rm -rf node_modules apps/web/node_modules apps/mobile/node_modules packages/ui/node_modules"
   },
   "devDependencies": {
     "prettier": "^3.4.2",

@@ -13,6 +13,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#12063B"
     },
+    "statusBar": {
+      "hidden": true
+    },
     "ios": {
       "supportsTablet": true
     },
