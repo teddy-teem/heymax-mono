@@ -1,5 +1,9 @@
 {
   "name": "@heymax/assets",
   "version": "1.0.0",
-  "main": "index.ts"
+  "main": "index.ts",
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --fix"
+  }
 }
