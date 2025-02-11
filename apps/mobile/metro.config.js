@@ -1,5 +1,7 @@
 const path = require('path');
 const { getDefaultConfig } = require('expo/metro-config');
+const { withNativeWind } = require("nativewind/metro");
+
 
 const projectRoot = __dirname;
 const monorepoRoot = path.resolve(projectRoot, '../..');
@@ -7,7 +9,6 @@ const uiRoot = path.resolve(monorepoRoot, 'packages/ui');
 
 const config = getDefaultConfig(projectRoot);
 
-// Ensure Metro looks in the right places for node_modules
 config.watchFolders = [monorepoRoot];
 
 config.resolver.nodeModulesPaths = [
@@ -16,4 +17,10 @@ config.resolver.nodeModulesPaths = [
   path.resolve(uiRoot, 'node_modules'),
 ];
 
-module.exports = config;
+config.transformer = {
+  ...config.transformer,
+  babelTransformerPath: require.resolve('react-native-svg-transformer'),
+  assetPlugins: ['expo-asset/tools/hashAssetFiles'],
+};
+
+module.exports = withNativeWind(config, { input: "./global.css" });;

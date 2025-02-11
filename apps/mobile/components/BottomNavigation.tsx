@@ -1,65 +1,40 @@
-import { View, StyleSheet, Alert } from "react-native";
+import { View, StyleSheet } from "react-native";
 import React from "react";
 import { COLORS, Button, Typography } from "@heymax/ui";
-import { CarouselItem } from "@/app/(onboard)";
 import RightArrowIcon from "@/assets/icons/right-arrow";
 import { scale } from "react-native-size-matters";
 import { Pagination } from "./Pagination";
+import type { BottomNavigationProps } from "@/utils/models/BottomNavigation";
 
-interface IProps {
-  paginationIndex: number;
-  items: CarouselItem[];
-  onNext: () => void;
-}
-
-
-export default function BottomNavigation({
+const BottomNavigation = ({
   paginationIndex,
-  items,
   onNext,
-}: IProps) {
-
-
+  label,
+}: BottomNavigationProps): React.ReactNode => {
   return (
-    <View style={[styles.container]}>
-      <Pagination paginationIndex={paginationIndex} items={items} />
+    <View className="bg-background flex-row justify-between px-10 border-t-2 border-t-[#2B204D] py-4">
+      <Pagination paginationIndex={paginationIndex} />
       <Button onPress={onNext}>
-        <View style={[styles.buttonChild]}>
+        <View className="flex-row items-center gap-2 justify-center">
           <Typography variant="h3" style={styles.buttonText}>
-            {items[paginationIndex].instruction}
+            {label}
           </Typography>
-          {items[paginationIndex].showArrow && (
-            <RightArrowIcon
-              {...(!items[paginationIndex].instruction && {
-                height: scale(20),
-                width: scale(20),
-              })}
-            />
-          )}
+          <RightArrowIcon
+            {...(!label && {
+              height: scale(20),
+              width: scale(20),
+            })}
+          />
         </View>
       </Button>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: COLORS.default.background,
-    width: "100%",
-    paddingHorizontal: scale(20),
-    paddingVertical: scale(10),
-    flexDirection: "row",
-    justifyContent: "space-between",
-    borderTopWidth: 1,
-    borderTopColor: "#231746",
-  },
-  buttonChild: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: scale(10),
-  },
   buttonText: {
     color: "white",
   },
 });
+
+export default BottomNavigation;

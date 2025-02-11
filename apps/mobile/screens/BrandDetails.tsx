@@ -7,10 +7,10 @@ import { scale } from "react-native-size-matters";
 
 const BrandDetails = (): React.ReactNode => {
   return (
-    <View style={[styles.container]}>
+    <View className="flex-1 items-center gap-12 mt-32">
       <BrandLogo />
       <UniverseImage />
-      <View style={styles.content}>
+      <View className="flex-1 items-center">
         <Typography style={styles.contentHeading1} variant="h1">
           Shop your way to a
         </Typography>
@@ -27,14 +27,6 @@ const BrandDetails = (): React.ReactNode => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    flexDirection: "column",
-    gap: scale(32),
-    marginTop: scale(120),
-  },
-  content: { justifyContent: "center", alignItems: "center" },
   contentHeading1: { color: COLORS.default.secondary },
   contentHeading2: { color: COLORS.default.primary },
   contentBody: {

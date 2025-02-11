@@ -5,6 +5,7 @@ import {
   StyleSheet,
   View,
   FlatList,
+  ScrollView,
 } from 'react-native';
 import { scale } from 'react-native-size-matters';
 
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
   scrollViewContainer: {
     gap: scale(10),
     height: 80,
-    marginTop: scale(40),
+    marginTop: scale(30),
     marginLeft: scale(5),
   },
 });

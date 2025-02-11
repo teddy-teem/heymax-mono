@@ -9,12 +9,11 @@ import Animated, {
   Extrapolation,
 } from "react-native-reanimated";
 
-export interface PaginationProps<T> {
+export interface PaginationProps {
   paginationIndex: number;
-  items: T[];
 }
 
-export function Pagination<T>({ paginationIndex, items }: PaginationProps<T>) {
+export function Pagination<T>({ paginationIndex }: PaginationProps) {
   const animatedIndex = useSharedValue(paginationIndex);
 
   useEffect(() => {
@@ -23,7 +22,7 @@ export function Pagination<T>({ paginationIndex, items }: PaginationProps<T>) {
 
   return (
     <View style={styles.container}>
-      {items.map((_, index) => {
+      {[1,2,3].map((_, index) => {
         const animatedStyle = useAnimatedStyle(() => {
           return {
             width: interpolate(

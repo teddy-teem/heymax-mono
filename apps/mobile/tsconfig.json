@@ -6,14 +6,21 @@
       "@/*": [
         "./*"
       ],
-      "@heymax/ui": ["../../packages/ui/src"]
+      "@heymax/ui": [
+        "../../packages/ui/src"
+      ]
     },
-    "types": ["react", "react-native"],
+    "types": [
+      "react",
+      "react-native"
+    ]
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "expo-env.d.ts",
+    "postcss.config.js",
+    "nativewind-env.d.ts"
   ]
 }

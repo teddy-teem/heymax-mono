@@ -40,10 +40,9 @@ export default function GridView() {
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
+    justifyContent: 'flex-start',
     flexWrap: "wrap",
     gap: scale(10),
-    flexGrow: 1,
-    marginLeft: scale(8),
-    marginRight: scale(20),
+    marginRight: scale(30)
   },
 });
