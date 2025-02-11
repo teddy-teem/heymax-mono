@@ -5,7 +5,7 @@ import BrandDetails from "@/screens/BrandDetails";
 const Index = () => {
   return (
     <View
-      className={`flex-1 items-center justify-center items-center bg-background`}
+      className="flex-1 items-center justify-center items-center bg-background"
     >
       <BrandDetails />
     </View>

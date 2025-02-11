@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-import { Button, COLORS, HorizontalLine, Typography } from "@heymax/ui";
+import { Button, HorizontalLine, Typography } from "@heymax/ui";
 import RightArrowIcon from "../public/icons/right-arrow";
 import { useRouter } from "next/navigation";
 
@@ -14,14 +14,9 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({
   currentIndex,
   buttonLabel,
 }) => {
-  const [animatedIndex, setAnimatedIndex] = useState(currentIndex);
   const router = useRouter();
-  useEffect(() => {
-    setAnimatedIndex(currentIndex);
-  }, [currentIndex]);
 
   const handleButtonClick = () => {
-    console.log("current index", currentIndex);
     switch (currentIndex) {
       case 0:
         router.push("/shopping");
@@ -30,7 +25,7 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({
         router.push("/redeem");
         break;
       case 2:
-        window.open('https://heymax.ai', '_blank', 'noopener,noreferrer');
+        window.open("https://heymax.ai", "_blank", "noopener,noreferrer");
         break;
       default:
         router.push("/");
@@ -74,13 +69,12 @@ const styles: { [key: string]: React.CSSProperties } = {
     display: "flex",
     flexDirection: "column",
     height: "10dvh",
-  
   },
   contentContainer: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
-    marginTop: '20px',
+    marginTop: "20px",
   },
   dotContainer: {
     display: "flex",

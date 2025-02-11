@@ -40,7 +40,6 @@ export default function RootLayout() {
   }
 
   const handleNext = () => {
-    console.log(currentRouteDetails?.id);
     switch (currentRouteDetails.route) {
       case ROUTES[0].route:
         router.push(ROUTES[1].route as RelativePathString);
