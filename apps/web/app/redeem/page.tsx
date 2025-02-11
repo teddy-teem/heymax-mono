@@ -1,5 +1,6 @@
-import BottomNavigation from "../../components/bottom-nav";
-import Redeem from "../../features/redeem";
+import { ROUTES } from "@heymax/constants";
+import BottomNavigation from "../../components/BottomNavigation";
+import Redeem from "../../features/Redeem";
 
 export default function Home() {
   return (
@@ -13,7 +14,10 @@ export default function Home() {
       }}
     >
       <Redeem />
-      <BottomNavigation currentIndex={2} buttonLabel="Get Started"/>
+      <BottomNavigation
+        currentIndex={ROUTES[2]?.id || 2}
+        buttonLabel={ROUTES[2]?.instruction || ""}
+      />
     </div>
   );
 }

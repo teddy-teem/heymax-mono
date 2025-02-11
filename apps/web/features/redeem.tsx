@@ -1,31 +1,8 @@
 "use client";
 import React from "react";
 import { HorizontalLine, NeonCircle, Typography } from "@heymax/ui";
-import RedeemCard from "../components/redeem-card";
-
-const redeems = [
-  {
-    id: 1,
-    title: "Transfer miles",
-    body: "25 Airline and Hotel Partners, No Fees, 1:1 Transfer Ratio",
-    icon: "/icons/transfer-miles.png",
-    instruction: "Best for Business & First Class",
-  },
-  {
-    id: 2,
-    title: "Fly and Claim",
-    body: "Upload your flight ticket, and get reimbursed within 5 days.",
-    icon: "/icons/fly-claim.png",
-    instruction: "Best for Economy",
-  },
-  {
-    id: 3,
-    title: "Not flying soon",
-    body: "You can always redeem Gift Cards with your Max Miles.",
-    icon: "/icons/no-flight-soon.png",
-    instruction: "Best for Starters",
-  },
-];
+import RedeemCard from "../components/RedeemCard";
+import { REDEEMS } from "@heymax/constants";
 
 export default function Redeem() {
   return (
@@ -51,10 +28,10 @@ export default function Redeem() {
           flexDirection: "column",
           alignItems: "center",
           gap: 20,
-          marginRight: -80
+          marginRight: -80,
         }}
       >
-        {redeems.map((i, index) => (
+        {REDEEMS.map((i) => (
           <RedeemCard
             key={i.id}
             icon={i.icon}

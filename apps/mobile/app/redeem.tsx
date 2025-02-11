@@ -2,7 +2,7 @@ import * as React from "react";
 import { View } from "react-native";
 import RedeemPage from "@/screens/RedeemPage";
 
-const Index = () => {
+const Redeem = () => {
   return (
     <View className="flex-1 items-center justify-center items-center bg-background">
       <RedeemPage />
@@ -10,4 +10,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Redeem;

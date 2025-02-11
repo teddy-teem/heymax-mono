@@ -1,6 +1,6 @@
 import { View, StyleSheet, Dimensions, ScrollView } from "react-native";
 import React from "react";
-import { NeonCircle, HorizontalLine, Typography, Chip } from "@heymax/ui";
+import { NeonCircle, HorizontalLine, Typography } from "@heymax/ui";
 import ImageGrid from "../components/GridView";
 import { scale } from "react-native-size-matters";
 import QuickActions from "@/components/QuickActions";
@@ -9,8 +9,8 @@ const { width } = Dimensions.get("screen");
 
 const ShoppingBrands = (): React.ReactNode => {
   return (
-    <ScrollView style={{paddingTop: scale(80), paddingLeft: scale(30)}}>
-      <View style={styles.neonLine}>
+    <ScrollView className="pt-32 pl-10" >
+      <View className="flex-row justify-end items-center">
         <NeonCircle value={1} />
         <HorizontalLine width={width - scale(60)} />
       </View>
@@ -28,12 +28,5 @@ const ShoppingBrands = (): React.ReactNode => {
   );
 };
 
-const styles = StyleSheet.create({
-  neonLine: {
-    flexDirection: "row",
-    justifyContent: "flex-end",
-    alignItems: "center",
-  },
-});
 
 export default ShoppingBrands;

@@ -1,37 +1,25 @@
-import { Chip } from '@heymax/ui';
-import React, { useState } from 'react';
-import {
-  TouchableOpacity,
-  StyleSheet,
-  View,
-  FlatList,
-  ScrollView,
-} from 'react-native';
-import { scale } from 'react-native-size-matters';
-
-const actions = [
-  { id: 1, label: 'Shop Online' },
-  { id: 2, label: 'Book Travel' },
-  { id: 3, label: 'Order Food' },
-  { id: 4, label: 'Order Med' },
-];
+import { QUICK_ACTIONS } from "@heymax/constants";
+import { Chip } from "@heymax/ui";
+import React, { useState } from "react";
+import { TouchableOpacity, StyleSheet, FlatList } from "react-native";
+import { scale } from "react-native-size-matters";
 
 const QuickActions = function () {
   const [selectedItem, setSelectedItem] = useState<number>(1);
 
   return (
     <FlatList
-      data={actions}
+      data={QUICK_ACTIONS}
       horizontal
-      keyExtractor={(item) => item.id.toString()}
-      nestedScrollEnabled={true} 
+      keyExtractor={(item, index) => index.toString()}
+      nestedScrollEnabled={true}
       keyboardShouldPersistTaps="always"
       showsHorizontalScrollIndicator={false}
       contentContainerStyle={styles.scrollViewContainer}
       renderItem={({ item, index }) => (
-          <TouchableOpacity onPress={() => setSelectedItem(index)}>
-            <Chip text={item.label} applyNeonEffect={selectedItem === index} />
-          </TouchableOpacity>
+        <TouchableOpacity onPress={() => setSelectedItem(index)}>
+          <Chip text={item} applyNeonEffect={selectedItem === index} />
+        </TouchableOpacity>
       )}
     />
   );

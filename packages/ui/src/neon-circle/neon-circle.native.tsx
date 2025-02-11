@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Platform, ViewStyle } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
 export interface NeonCircleProps {
   value: number;

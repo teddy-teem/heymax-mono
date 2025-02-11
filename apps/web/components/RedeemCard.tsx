@@ -15,6 +15,7 @@ export default function RedeemCard({
   body,
   instruction,
 }: RedeemCardProp) {
+  
   return (
     <div style={styles.container}>
       <Image src={icon} height={60} width={60} alt={"Icons"} />

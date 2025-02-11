@@ -4,6 +4,7 @@ import React from "react";
 import { Button, HorizontalLine, Typography } from "@heymax/ui";
 import RightArrowIcon from "../public/icons/right-arrow";
 import { useRouter } from "next/navigation";
+import { LAST_SCREEN_REDIRECT_URL, ROUTES } from "@heymax/constants";
 
 interface BottomNavigationProps {
   currentIndex: number;
@@ -14,28 +15,28 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({
   currentIndex,
   buttonLabel,
 }) => {
+
   const router = useRouter();
 
   const handleButtonClick = () => {
     switch (currentIndex) {
       case 0:
-        router.push("/shopping");
+        router.push(String(ROUTES[1]?.route));
         break;
       case 1:
-        router.push("/redeem");
+        router.push(String(ROUTES[2]?.route));
         break;
       case 2:
-        window.open("https://heymax.ai", "_blank", "noopener,noreferrer");
+        window.open(LAST_SCREEN_REDIRECT_URL, "_blank", "noopener,noreferrer");
         break;
       default:
-        router.push("/");
+        router.push(String(ROUTES[0]?.route));
     }
   };
 
   return (
     <div style={styles.container}>
       <HorizontalLine />
-
       <div style={styles.contentContainer}>
         <div style={styles.dotContainer}>
           {[1, 2, 3].map((_, index) => {

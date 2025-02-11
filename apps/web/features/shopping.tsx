@@ -1,10 +1,13 @@
 "use client";
 import React, { useState } from "react";
 import { Chip, HorizontalLine, NeonCircle, Typography } from "@heymax/ui";
-import GridView from "../components/grid-view";
+import GridView from "../components/GridView";
+import { QUICK_ACTIONS } from "@heymax/constants";
 
 export default function Shopping() {
+  
   const [selectedTab, setSelectedTab] = useState(1);
+
   return (
     <div style={styles.container}>
       <div style={styles.line}>
@@ -22,13 +25,7 @@ export default function Shopping() {
         }}
       >
         <div style={styles.containerStyle}>
-          {[
-            "Shop Online",
-            "Book Travel",
-            "Order Food",
-            "Order Med",
-            "Trade Online",
-          ].map((text, ind) => (
+          {QUICK_ACTIONS.map((text, ind) => (
             <button
               key={ind}
               style={{

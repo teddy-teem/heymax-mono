@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import React from "react";
 import BrandLogo from "@/assets/images/brand-logo";
 import UniverseImage from "@/assets/images/universe";
@@ -6,6 +6,7 @@ import { COLORS, Typography } from "@heymax/ui";
 import { scale } from "react-native-size-matters";
 
 const BrandDetails = (): React.ReactNode => {
+
   return (
     <View className="flex-1 items-center gap-12 mt-32">
       <BrandLogo />

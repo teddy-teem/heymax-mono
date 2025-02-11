@@ -1,6 +1,6 @@
 import { View, StyleSheet } from "react-native";
 import React from "react";
-import { COLORS, Button, Typography } from "@heymax/ui";
+import { Button, Typography } from "@heymax/ui";
 import RightArrowIcon from "@/assets/icons/right-arrow";
 import { scale } from "react-native-size-matters";
 import { Pagination } from "./Pagination";

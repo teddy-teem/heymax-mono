@@ -1,5 +1,6 @@
-import BottomNavigation from "../../components/bottom-nav";
-import Shopping from "../../features/shopping";
+import { ROUTES } from "@heymax/constants";
+import BottomNavigation from "../../components/BottomNavigation";
+import Shopping from "../../features/Shopping";
 
 export default function Home() {
   return (
@@ -13,7 +14,10 @@ export default function Home() {
       }}
     >
       <Shopping />
-      <BottomNavigation currentIndex={1} buttonLabel=""/>
+      <BottomNavigation
+        currentIndex={ROUTES[1]?.id || 1}
+        buttonLabel={ROUTES[1]?.instruction || ""}
+      />
     </div>
   );
 }

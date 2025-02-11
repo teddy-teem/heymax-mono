@@ -6,10 +6,10 @@ import * as SplashScreen from "expo-splash-screen";
 import * as WebBrowser from "expo-web-browser";
 import { COLORS } from "@heymax/ui";
 import { View, StyleSheet } from "react-native";
-import "react-native-reanimated";
-import "../global.css";
 import BottomNavigation from "@/components/BottomNavigation";
 import { LAST_SCREEN_REDIRECT_URL, ROUTES } from "@heymax/constants";
+import "react-native-reanimated";
+import "../global.css";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -21,7 +21,7 @@ const openInAppBrowser = async () => {
   }
 };
 
-export default function RootLayout() {
+const RootLayout = ()  => {
   const router = useRouter();
   const [currentRouteDetails, setCurrentRouteDetails] = useState(ROUTES[0]);
 
@@ -53,7 +53,7 @@ export default function RootLayout() {
         openInAppBrowser();
         break;
       default:
-        router.push("/");
+        router.push(ROUTES[0].route as RelativePathString);
         setCurrentRouteDetails(ROUTES[0]);
     }
   };
@@ -96,3 +96,5 @@ const styles = StyleSheet.create({
     right: 0,
   },
 });
+
+export default RootLayout;
