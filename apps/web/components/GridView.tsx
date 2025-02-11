@@ -1,17 +1,17 @@
-import { SHOPPING_BRANDS } from "@heymax/constants";
-import Image from "next/image";
-import React from "react";
+import { SHOPPING_BRANDS } from '@heymax/constants';
+import Image from 'next/image';
+import React from 'react';
 
-export default function GridView(): JSX.Element {
+export default function GridView(): React.ReactNode {
   const containerStyle: React.CSSProperties = {
-    display: "flex",
+    display: 'flex',
     marginTop: 20,
     width: '100%',
-    flexWrap: "wrap",
-    gap: "10px",
+    flexWrap: 'wrap',
+    gap: '10px',
     flexGrow: 1,
-    paddingRight: "140px",
-    paddingLeft: "100px",
+    paddingRight: '140px',
+    paddingLeft: '100px',
     justifyContent: 'center',
   };
   return (
@@ -24,10 +24,10 @@ export default function GridView(): JSX.Element {
           height={img?.height}
           width={img?.width}
           style={{
-            borderRadius: "15px",
+            borderRadius: '15px',
             flexGrow: 1,
-            objectFit: "cover",
-            ...(index === 2 || index === 3 ? { marginTop: "-18px" } : {}),
+            objectFit: 'cover',
+            ...(index === 2 || index === 3 ? { marginTop: '-18px' } : {}),
           }}
         />
       ))}

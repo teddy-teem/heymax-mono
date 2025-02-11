@@ -1,6 +1,6 @@
-import React, { JSX } from "react";
-import { TouchableOpacity, StyleSheet } from "react-native";
-import { COLORS } from "../constants/colors";
+import React, { JSX } from 'react';
+import { TouchableOpacity, StyleSheet } from 'react-native';
+import { COLORS } from '../constants/colors';
 
 export interface ButtonProps {
   children: JSX.Element | string;

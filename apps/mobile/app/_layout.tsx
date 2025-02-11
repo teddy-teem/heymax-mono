@@ -1,43 +1,20 @@
-import { useEffect, useState } from "react";
-import { StatusBar } from "expo-status-bar";
-import { useFonts } from "expo-font";
-import { RelativePathString, Stack, useRouter } from "expo-router";
-import * as SplashScreen from "expo-splash-screen";
-import * as WebBrowser from "expo-web-browser";
-import { COLORS } from "@heymax/ui";
-import { View, StyleSheet } from "react-native";
-import BottomNavigation from "@/components/BottomNavigation";
-import { LAST_SCREEN_REDIRECT_URL, ROUTES } from "@heymax/constants";
-import "react-native-reanimated";
-import "../global.css";
+import { LAST_SCREEN_REDIRECT_URL, ROUTES } from '@heymax/constants';
+import { COLORS } from '@heymax/ui';
+import { RelativePathString, Stack, useRouter } from 'expo-router';
+import * as SplashScreen from 'expo-splash-screen';
+import { StatusBar } from 'expo-status-bar';
+import * as WebBrowser from 'expo-web-browser';
+import { useState } from 'react';
+import { View, StyleSheet } from 'react-native';
+import BottomNavigation from '@/components/BottomNavigation';
+import 'react-native-reanimated';
+import '../global.css';
 
 SplashScreen.preventAutoHideAsync();
 
-const openInAppBrowser = async () => {
-  try {
-    await WebBrowser.openBrowserAsync(LAST_SCREEN_REDIRECT_URL);
-  } catch (error) {
-    console.error("Error opening in-app browser:", error);
-  }
-};
-
-const RootLayout = ()  => {
+const RootLayout = () => {
   const router = useRouter();
   const [currentRouteDetails, setCurrentRouteDetails] = useState(ROUTES[0]);
-
-  const [loaded] = useFonts({
-    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
-  });
-
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
-
-  if (!loaded) {
-    return null;
-  }
 
   const handleNext = () => {
     switch (currentRouteDetails.route) {
@@ -50,7 +27,7 @@ const RootLayout = ()  => {
         setCurrentRouteDetails(ROUTES[2]);
         break;
       case ROUTES[2].route:
-        openInAppBrowser();
+        WebBrowser.openBrowserAsync(LAST_SCREEN_REDIRECT_URL);
         break;
       default:
         router.push(ROUTES[0].route as RelativePathString);
@@ -74,7 +51,7 @@ const RootLayout = ()  => {
       <View style={styles.bottomNavigationContainer}>
         <BottomNavigation
           paginationIndex={currentRouteDetails?.id || 0}
-          label={currentRouteDetails?.instruction || ""}
+          label={currentRouteDetails?.instruction || ''}
           onNext={handleNext}
         />
       </View>
@@ -82,7 +59,7 @@ const RootLayout = ()  => {
       <StatusBar style="light" />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -90,7 +67,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.default.background,
   },
   bottomNavigationContainer: {
-    position: "absolute",
+    position: 'absolute',
     bottom: 40,
     left: 0,
     right: 0,

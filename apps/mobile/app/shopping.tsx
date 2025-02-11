@@ -1,6 +1,6 @@
-import * as React from "react";
-import { View } from "react-native";
-import ShoppingBrands from "@/screens/ShoppingBrands";
+import * as React from 'react';
+import { View } from 'react-native';
+import ShoppingBrands from '@/screens/ShoppingBrands';
 
 const Shopping = () => {
   return (

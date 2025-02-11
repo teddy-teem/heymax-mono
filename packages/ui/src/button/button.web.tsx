@@ -1,6 +1,6 @@
 'use client';
-import React, { JSX } from "react";
-import { COLORS } from "../constants/colors";
+import React, { JSX } from 'react';
+import { COLORS } from '../constants/colors';
 
 export interface ButtonProps {
   children: JSX.Element | string;
@@ -18,7 +18,7 @@ export const Button: React.FC<ButtonProps> = function ({ children, onPress }) {
         paddingRight: 20,
         borderRadius: 30,
         border: 'none', 
-        cursor: "pointer"
+        cursor: 'pointer'
       }}
       onClick={onPress}
     >

@@ -1,10 +1,10 @@
-"use client";
-import React from "react";
+'use client';
+import { LAST_SCREEN_REDIRECT_URL, ROUTES } from '@heymax/constants';
+import { Button, HorizontalLine, Typography } from '@heymax/ui';
+import { useRouter } from 'next/navigation';
+import React from 'react';
 
-import { Button, HorizontalLine, Typography } from "@heymax/ui";
-import RightArrowIcon from "../public/icons/right-arrow";
-import { useRouter } from "next/navigation";
-import { LAST_SCREEN_REDIRECT_URL, ROUTES } from "@heymax/constants";
+import RightArrowIcon from '../public/icons/right-arrow';
 
 interface BottomNavigationProps {
   currentIndex: number;
@@ -27,7 +27,7 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({
         router.push(String(ROUTES[2]?.route));
         break;
       case 2:
-        window.open(LAST_SCREEN_REDIRECT_URL, "_blank", "noopener,noreferrer");
+        window.open(LAST_SCREEN_REDIRECT_URL, '_blank', 'noopener,noreferrer');
         break;
       default:
         router.push(String(ROUTES[0]?.route));
@@ -47,8 +47,8 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({
                 style={{
                   ...styles.dot,
                   width,
-                  backgroundColor: index === currentIndex ? "white" : "gray",
-                  transition: "width 0.3s ease-in-out",
+                  backgroundColor: index === currentIndex ? 'white' : 'gray',
+                  transition: 'width 0.3s ease-in-out',
                 }}
               />
             );
@@ -56,7 +56,7 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({
         </div>
         <Button onPress={handleButtonClick}>
           <div style={styles.buttonChildren}>
-            <Typography style={{ color: "white" }}>{buttonLabel}</Typography>
+            <Typography style={{ color: 'white' }}>{buttonLabel}</Typography>
             <RightArrowIcon />
           </div>
         </Button>
@@ -67,32 +67,32 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({
 
 const styles: { [key: string]: React.CSSProperties } = {
   container: {
-    display: "flex",
-    flexDirection: "column",
-    height: "10dvh",
+    display: 'flex',
+    flexDirection: 'column',
+    height: '10dvh',
   },
   contentContainer: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-around",
-    marginTop: "20px",
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginTop: '20px',
   },
   dotContainer: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   dot: {
     height: 8,
     borderRadius: 10,
-    margin: "0 2px",
-    display: "inline-block",
+    margin: '0 2px',
+    display: 'inline-block',
   },
   buttonChildren: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-around",
-    alignItems: "center",
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
     gap: 10,
   },
 };

@@ -1,7 +1,7 @@
-import { View, Image, StyleSheet } from "react-native";
-import React from "react";
-import { scale } from "react-native-size-matters";
-import { SHOPPING_BRANDS } from "@heymax/constants";
+import { SHOPPING_BRANDS } from '@heymax/constants';
+import React from 'react';
+import { View, Image, StyleSheet } from 'react-native';
+import { scale } from 'react-native-size-matters';
 
 export default function GridView() {
   return (
@@ -27,9 +27,9 @@ export default function GridView() {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "row",
-    justifyContent: "flex-start",
-    flexWrap: "wrap",
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    flexWrap: 'wrap',
     gap: scale(10),
     marginRight: scale(30),
   },

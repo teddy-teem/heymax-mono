@@ -1,6 +1,6 @@
-import * as React from "react";
-import { View } from "react-native";
-import BrandDetails from "@/screens/BrandDetails";
+import * as React from 'react';
+import { View } from 'react-native';
+import BrandDetails from '@/screens/BrandDetails';
 
 const Index = () => {
   return (

@@ -1,10 +1,10 @@
-import { View, StyleSheet } from "react-native";
-import React from "react";
-import { Button, Typography } from "@heymax/ui";
-import RightArrowIcon from "@/assets/icons/right-arrow";
-import { scale } from "react-native-size-matters";
-import { Pagination } from "./Pagination";
-import type { BottomNavigationProps } from "@/utils/models/BottomNavigation";
+import { Button, Typography } from '@heymax/ui';
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
+import { scale } from 'react-native-size-matters';
+import { Pagination } from './Pagination';
+import RightArrowIcon from '@/assets/icons/right-arrow';
+import type { BottomNavigationProps } from '@/utils/models/BottomNavigation';
 
 const BottomNavigation = ({
   paginationIndex,
@@ -33,7 +33,7 @@ const BottomNavigation = ({
 
 const styles = StyleSheet.create({
   buttonText: {
-    color: "white",
+    color: 'white',
   },
 });
 

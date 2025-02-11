@@ -1,5 +1,5 @@
-import * as React from "react";
-import Svg, { Path, SvgProps } from "react-native-svg";
+import * as React from 'react';
+import Svg, { Path, SvgProps } from 'react-native-svg';
 interface ISvgIcon extends SvgProps {}
 
 const RightArrowIcon = (props: ISvgIcon) => (

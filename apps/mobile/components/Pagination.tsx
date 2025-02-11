@@ -1,19 +1,19 @@
 
-import { View, StyleSheet } from "react-native";
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
+import { View, StyleSheet } from 'react-native';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
   withTiming,
   interpolate,
   Extrapolation,
-} from "react-native-reanimated";
+} from 'react-native-reanimated';
 
 export interface PaginationProps {
   paginationIndex: number;
 }
 
-export function Pagination<T>({ paginationIndex }: PaginationProps) {
+export function Pagination({ paginationIndex }: PaginationProps) {
   const animatedIndex = useSharedValue(paginationIndex);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export function Pagination<T>({ paginationIndex }: PaginationProps) {
             style={[
               styles.dot,
               animatedStyle,
-              { backgroundColor: index === paginationIndex ? "white" : "gray" },
+              { backgroundColor: index === paginationIndex ? 'white' : 'gray' },
             ]}
           />
         );
@@ -51,9 +51,9 @@ export function Pagination<T>({ paginationIndex }: PaginationProps) {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   dot: {
     height: 8,

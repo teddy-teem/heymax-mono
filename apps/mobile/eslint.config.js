@@ -12,7 +12,6 @@ export default [
       "babel.config.js",
       "tailwind.config.js",
       "metro.config.js",
-      "next.config.ts",
       "postcss.config.js",
       "node_modules/",
       "scripts/",
@@ -20,30 +19,25 @@ export default [
       "build/",
       ".next/",
       ".turbo/",
-      ".expo/",
+      ".expo/"
     ],
   },
   {
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
       parser: tsParser,
-      globals: {
-        window: "readonly",
-        document: "readonly",
-        SVGSVGElement: "readonly",
-      },
     },
     plugins: {
       "@typescript-eslint": ts,
-      react: react,
+      "react": react,
       "react-hooks": reactHooks,
-      import: importPlugin,
+      "import": importPlugin,
     },
     rules: {
-      semi: ["warn", "always"],
-      quotes: ["warn", "single", { allowTemplateLiterals: true }],
+      "semi": ["warn", "always"],
+      "quotes": ["warn", "single", { "allowTemplateLiterals": true }],
       "no-var": "warn",
-      eqeqeq: "warn",
+      "eqeqeq": "warn",
       "default-case": "warn",
       "default-case-last": "warn",
       "consistent-return": "warn",
@@ -55,15 +49,11 @@ export default [
       "import/order": [
         "error",
         {
-          groups: [
-            ["builtin", "external"],
-            "internal",
-            ["parent", "sibling", "index"],
-          ],
+          "groups": [["builtin", "external"], "internal", ["parent", "sibling", "index"]],
           "newlines-between": "ignore",
-          alphabetize: { order: "asc", caseInsensitive: true },
-        },
-      ],
+          "alphabetize": { "order": "asc", "caseInsensitive": true },
+        }
+      ]
     },
-  },
+  }
 ];

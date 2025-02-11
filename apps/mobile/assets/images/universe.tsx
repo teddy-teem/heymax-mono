@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import Svg, {
   Rect,
   Defs,
@@ -6,7 +6,7 @@ import Svg, {
   Use,
   Image,
   SvgProps,
-} from "react-native-svg";
+} from 'react-native-svg';
 interface IUniverseImage extends SvgProps {}
 const UniverseImage: React.FC<IUniverseImage> = (props) => (
   <Svg width={327} height={310} viewBox="0 0 327 310" fill="none" {...props}>

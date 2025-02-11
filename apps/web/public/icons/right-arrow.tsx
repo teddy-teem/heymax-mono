@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 interface IconProps extends React.SVGProps<SVGSVGElement> {}
 
 const RightArrowIcon = (props: IconProps) => (

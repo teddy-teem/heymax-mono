@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export interface NeonCircleProps {
   value: number;
@@ -42,7 +42,7 @@ const styles = `
   }
 `;
 
-const styleSheet = document.createElement("style");
-styleSheet.type = "text/css";
+const styleSheet = document.createElement('style');
+styleSheet.type = 'text/css';
 styleSheet.innerText = styles;
 document.head.appendChild(styleSheet);

@@ -1,8 +1,8 @@
-import { QUICK_ACTIONS } from "@heymax/constants";
-import { Chip } from "@heymax/ui";
-import React, { useState } from "react";
-import { TouchableOpacity, StyleSheet, FlatList } from "react-native";
-import { scale } from "react-native-size-matters";
+import { QUICK_ACTIONS } from '@heymax/constants';
+import { Chip } from '@heymax/ui';
+import React, { useState } from 'react';
+import { TouchableOpacity, StyleSheet, FlatList } from 'react-native';
+import { scale } from 'react-native-size-matters';
 
 const QuickActions = function () {
   const [selectedItem, setSelectedItem] = useState<number>(1);

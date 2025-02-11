@@ -1,9 +1,9 @@
-import { View, StyleSheet } from "react-native";
-import React from "react";
-import BrandLogo from "@/assets/images/brand-logo";
-import UniverseImage from "@/assets/images/universe";
-import { COLORS, Typography } from "@heymax/ui";
-import { scale } from "react-native-size-matters";
+import { COLORS, Typography } from '@heymax/ui';
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
+import { scale } from 'react-native-size-matters';
+import BrandLogo from '@/assets/images/brand-logo';
+import UniverseImage from '@/assets/images/universe';
 
 const BrandDetails = (): React.ReactNode => {
 
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   contentHeading2: { color: COLORS.default.primary },
   contentBody: {
     color: COLORS.default.secondary,
-    textAlign: "center",
+    textAlign: 'center',
     paddingLeft: scale(50),
     paddingRight: scale(50),
     marginTop: scale(10),

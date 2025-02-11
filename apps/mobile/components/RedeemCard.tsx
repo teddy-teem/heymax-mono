@@ -1,7 +1,7 @@
-import { View, Image, ImageSourcePropType, StyleSheet } from "react-native";
-import React from "react";
-import { COLORS, Typography } from "@heymax/ui";
-import { scale } from "react-native-size-matters";
+import { COLORS, Typography } from '@heymax/ui';
+import React from 'react';
+import { View, Image, ImageSourcePropType } from 'react-native';
+import { scale } from 'react-native-size-matters';
 
 export interface RedeemCardProp {
   icon: ImageSourcePropType;
@@ -16,10 +16,10 @@ const RedeemCard = ({ icon, title, body, instruction }: RedeemCardProp) => {
     <View className="flex-row items-center rounded-xl p-6 gap-2 bg-[#1C0E4B]">
       <Image source={icon} style={{ height: scale(60), width: scale(60) }} />
       <View className="flex-col w-9/12 gap-3">
-        <Typography variant="h3" style={{ color: "white" }}>
+        <Typography variant="h3" style={{ color: 'white' }}>
           {title}
         </Typography>
-        <Typography style={{ color: "gray", flexWrap: "wrap" }}>
+        <Typography style={{ color: 'gray', flexWrap: 'wrap' }}>
           {body}
         </Typography>
         <Typography style={{ color: COLORS.default.primary }}>

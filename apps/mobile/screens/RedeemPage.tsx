@@ -1,12 +1,12 @@
-import { View, StyleSheet, Dimensions, TouchableOpacity } from "react-native";
-import React from "react";
-import { NeonCircle, HorizontalLine, Typography } from "@heymax/ui";
-import { FlashList } from "@shopify/flash-list";
-import { scale } from "react-native-size-matters";
-import RedeemCard from "@/components/RedeemCard";
-import { REDEEMS } from "@heymax/constants";
+import { REDEEMS } from '@heymax/constants';
+import { NeonCircle, HorizontalLine, Typography } from '@heymax/ui';
+import { FlashList } from '@shopify/flash-list';
+import React from 'react';
+import { View, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
+import { scale } from 'react-native-size-matters';
+import RedeemCard from '@/components/RedeemCard';
 
-const { width } = Dimensions.get("screen");
+const { width } = Dimensions.get('screen');
 
 const RedeemPage = (): React.ReactNode => {
 
@@ -40,10 +40,10 @@ const RedeemPage = (): React.ReactNode => {
 
 const styles = StyleSheet.create({
   title: {
-    color: "white",
+    color: 'white',
     paddingRight: scale(30),
     marginTop: scale(20),
-    textAlign: "right",
+    textAlign: 'right',
   },
 });
 

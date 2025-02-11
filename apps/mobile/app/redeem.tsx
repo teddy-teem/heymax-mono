@@ -1,6 +1,6 @@
-import * as React from "react";
-import { View } from "react-native";
-import RedeemPage from "@/screens/RedeemPage";
+import * as React from 'react';
+import { View } from 'react-native';
+import RedeemPage from '@/screens/RedeemPage';
 
 const Redeem = () => {
   return (

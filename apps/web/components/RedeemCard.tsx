@@ -1,6 +1,6 @@
-import React from "react";
-import { COLORS, Typography } from "@heymax/ui";
-import Image from "next/image";
+import { COLORS, Typography } from '@heymax/ui';
+import Image from 'next/image';
+import React from 'react';
 
 export interface RedeemCardProp {
   icon: string;
@@ -18,12 +18,12 @@ export default function RedeemCard({
   
   return (
     <div style={styles.container}>
-      <Image src={icon} height={60} width={60} alt={"Icons"} />
+      <Image src={icon} height={60} width={60} alt={'Icons'} />
       <div style={styles.content}>
-        <Typography variant="h3" style={{ color: "white" }}>
+        <Typography variant="h3" style={{ color: 'white' }}>
           {title}
         </Typography>
-        <Typography style={{ color: "gray", flexWrap: "wrap" }}>
+        <Typography style={{ color: 'gray', flexWrap: 'wrap' }}>
           {body}
         </Typography>
         <Typography style={{ color: COLORS.default.primary }}>
@@ -38,17 +38,17 @@ const styles: { [key: string]: React.CSSProperties } = {
   container: {
     padding: 20,
     borderRadius: 16,
-    backgroundColor: "#1C0E4B",
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
+    backgroundColor: '#1C0E4B',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
     gap: 5,
     cursor: 'pointer',
-    width: "100%"
+    width: '100%'
   },
   content: {
-    flexDirection: "column",
-    width: "80%",
+    flexDirection: 'column',
+    width: '80%',
     gap: 8,
   },
 };

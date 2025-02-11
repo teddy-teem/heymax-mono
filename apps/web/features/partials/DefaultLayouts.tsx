@@ -1,5 +1,5 @@
-import { COLORS } from "@heymax/ui";
-import React from "react";
+import { COLORS } from '@heymax/ui';
+import React from 'react';
 
 export default function DefaultLayouts({
   children,
@@ -10,9 +10,9 @@ export default function DefaultLayouts({
     <div
       style={{   
         backgroundColor: COLORS.default.background,
-        maxWidth: "720px",
-        minWidth: "720px",
-        height: "100%"
+        maxWidth: '720px',
+        minWidth: '720px',
+        height: '100%'
       }}
     >
       {children}

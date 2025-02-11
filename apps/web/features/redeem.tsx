@@ -1,8 +1,8 @@
-"use client";
-import React from "react";
-import { HorizontalLine, NeonCircle, Typography } from "@heymax/ui";
-import RedeemCard from "../components/RedeemCard";
-import { REDEEMS } from "@heymax/constants";
+'use client';
+import { REDEEMS } from '@heymax/constants';
+import { HorizontalLine, NeonCircle, Typography } from '@heymax/ui';
+import React from 'react';
+import RedeemCard from '../components/RedeemCard';
 
 export default function Redeem() {
   return (
@@ -14,19 +14,19 @@ export default function Redeem() {
       <Typography
         variant="h1"
         style={{
-          color: "white",
+          color: 'white',
           marginRight: 40,
-          textAlign: "right",
-          width: "100%",
+          textAlign: 'right',
+          width: '100%',
         }}
       >
         Redeem your trip
       </Typography>
       <div
         style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
           gap: 20,
           marginRight: -80,
         }}
@@ -47,32 +47,32 @@ export default function Redeem() {
 
 const styles: { [key: string]: React.CSSProperties } = {
   container: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    height: "90dvh",
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    height: '90dvh',
     marginRight: 80,
     marginTop: 50,
     paddingBottom: 20,
     gap: 20,
   },
   line: {
-    width: "100%",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "flex-start",
-    alignItems: "center",
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
   },
   containerStyle: {
-    overflowX: "auto",
-    whiteSpace: "nowrap",
+    overflowX: 'auto',
+    whiteSpace: 'nowrap',
     marginLeft: -40,
-    scrollBehavior: "smooth",
-    display: "flex",
-    paddingTop: "10px",
-    paddingBottom: "10px",
-    gap: "12px",
-    msOverflowStyle: "none",
-    scrollbarWidth: "none",
+    scrollBehavior: 'smooth',
+    display: 'flex',
+    paddingTop: '10px',
+    paddingBottom: '10px',
+    gap: '12px',
+    msOverflowStyle: 'none',
+    scrollbarWidth: 'none',
   },
 };

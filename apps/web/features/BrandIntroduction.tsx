@@ -1,7 +1,7 @@
-"use client";
-import React from "react";
-import Image from "next/image";
-import { COLORS, Typography } from "@heymax/ui";
+'use client';
+import { COLORS, Typography } from '@heymax/ui';
+import Image from 'next/image';
+import React from 'react';
 
 export default function BrandIntro() {
   return (
@@ -9,21 +9,21 @@ export default function BrandIntro() {
       style={styles.container}
     >
       <Image
-        src={"./brand-logo.svg"}
-        alt={"brand logo"}
+        src={'./brand-logo.svg'}
+        alt={'brand logo'}
         height={200}
         width={200}
       />
       <Image
-        src={"./universe.svg"}
-        alt={"brand logo"}
+        src={'./universe.svg'}
+        alt={'brand logo'}
         height={400}
         width={400}
       />
       <div
         style={styles.brandMessageContainer}
       >
-        <Typography variant="h1" style={{ color: "white" }}>
+        <Typography variant="h1" style={{ color: 'white' }}>
           Shop your way to a
         </Typography>
         <Typography variant="h1" style={{ color: COLORS.default.primary }}>
@@ -34,10 +34,10 @@ export default function BrandIntro() {
           style={{
             paddingLeft: 210,
             paddingRight: 210,
-            textAlign: "center",
+            textAlign: 'center',
             marginTop: 20,
-            color: "white",
-            marginBottom: "20px",
+            color: 'white',
+            marginBottom: '20px',
           }}
         >
           Turn your expenses into dream vacations by earning miles every time
@@ -52,26 +52,26 @@ export default function BrandIntro() {
 
 const styles: { [key: string]: React.CSSProperties } = {
   container: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "80dvh",
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '80dvh',
   },
   brandMessageContainer: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   dot: {
     height: 8,
     borderRadius: 10,
-    margin: "0 2px",
-    display: "inline-block",
+    margin: '0 2px',
+    display: 'inline-block',
   },
   buttonChildren: {
-    display: "flex",
-    flexDirection: "row",
+    display: 'flex',
+    flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
     gap: 10

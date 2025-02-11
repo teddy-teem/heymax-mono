@@ -1,8 +1,8 @@
-import { Text, StyleSheet } from "react-native";
-import { TypographyProps } from "./typography.type";
+import { Text, StyleSheet } from 'react-native';
+import { TypographyProps } from './typography.type';
 
 export const Typography = ({
-  variant = "body",
+  variant = 'body',
   children,
   style,
 }: TypographyProps) => {
@@ -15,27 +15,27 @@ export const Typography = ({
 
 const styles = StyleSheet.create({
   h1: {
-    fontFamily: "Inter",
+    fontFamily: 'Inter',
     fontSize: 40,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   h2: {
-    fontFamily: "Inter",
+    fontFamily: 'Inter',
     fontSize: 32,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   h3: {
     fontSize: 18,
-    fontWeight: "bold",
-    fontFamily: "Inter",
+    fontWeight: 'bold',
+    fontFamily: 'Inter',
   },
   body: {
-    fontFamily: "Inter",
+    fontFamily: 'Inter',
     fontSize: 16,
   },
   caption: {
     fontSize: 14,
-    fontFamily: "Inter",
-    color: "#666",
+    fontFamily: 'Inter',
+    color: '#666',
   },
 });

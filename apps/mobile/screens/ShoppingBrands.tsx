@@ -1,11 +1,11 @@
-import { View, StyleSheet, Dimensions, ScrollView } from "react-native";
-import React from "react";
-import { NeonCircle, HorizontalLine, Typography } from "@heymax/ui";
-import ImageGrid from "../components/GridView";
-import { scale } from "react-native-size-matters";
-import QuickActions from "@/components/QuickActions";
+import { NeonCircle, HorizontalLine, Typography } from '@heymax/ui';
+import React from 'react';
+import { View, Dimensions, ScrollView } from 'react-native';
+import { scale } from 'react-native-size-matters';
+import ImageGrid from '../components/GridView';
+import QuickActions from '@/components/QuickActions';
 
-const { width } = Dimensions.get("screen");
+const { width } = Dimensions.get('screen');
 
 const ShoppingBrands = (): React.ReactNode => {
   return (
@@ -16,7 +16,7 @@ const ShoppingBrands = (): React.ReactNode => {
       </View>
       <Typography
         variant="h1"
-        style={{ color: "white", marginLeft: scale(5), marginTop: scale(20) }}
+        style={{ color: 'white', marginLeft: scale(5), marginTop: scale(20) }}
       >
         Shop your favorite brands, earn miles
       </Typography>

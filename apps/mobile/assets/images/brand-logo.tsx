@@ -1,11 +1,11 @@
-import * as React from "react";
+import * as React from 'react';
 import Svg, {
   Path,
   Defs,
   LinearGradient,
   Stop,
   SvgProps,
-} from "react-native-svg";
+} from 'react-native-svg';
 interface IBrandLogo extends SvgProps {}
 const BrandLogo: React.FC<IBrandLogo> = (props) => (
   <Svg width={149} height={25} viewBox="0 0 149 25" fill="none" {...props}>

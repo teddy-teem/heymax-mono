@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import { Platform } from "react-native";
+import { Platform } from 'react-native';
 
 import {
   Chip as NativeChip,
   ChipProps as NativeChipProps,
-} from "./chip.native";
+} from './chip.native';
 
-import { Chip as WebChip, ChipProps as WebChipProps } from "./chip.web";
+import { Chip as WebChip, ChipProps as WebChipProps } from './chip.web';
 
-export type ChipProps = Platform["OS"] extends "web"
+export type ChipProps = Platform['OS'] extends 'web'
   ? WebChipProps
   : NativeChipProps;
 
-export const Chip = Platform.OS === "web" ? WebChip : NativeChip;
+export const Chip = Platform.OS === 'web' ? WebChip : NativeChip;
