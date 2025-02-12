@@ -6,7 +6,7 @@ import RedeemCard from '../components/RedeemCard';
 
 export default function Redeem() {
   return (
-    <div className="flex flex-col items-center mr-10 mt-12 pb-5 gap-5">
+    <div className="h-full flex flex-col items-center mr-10 mt-12 pb-5 gap-5">
       <div className="w-full flex flex-row justify-start items-center">
         <HorizontalLine />
         <NeonCircle value={2} />
