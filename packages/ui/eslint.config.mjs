@@ -22,7 +22,12 @@ export default [
       ".next/",
       ".turbo/",
       ".expo/",
-      "src/button/__tests__/"
+      "jest.config.js",
+      "src/button/__tests__/**",
+      "src/neon-circle/__tests__/**",
+      "src/typography/__tests__/**",
+      "src/horizontal-line/__tests__/**",
+      "src/chip/__tests__/**",
     ],
   },
   {

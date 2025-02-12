@@ -1,5 +1,4 @@
 import React from 'react';
-import { Typography } from '../typography';
 export interface ChipProps {
   text: string;
   applyNeonEffect?: boolean;

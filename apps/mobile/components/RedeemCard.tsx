@@ -1,4 +1,4 @@
-import { COLORS, Typography } from '@heymax/ui';
+import { Typography } from '@heymax/ui';
 import React from 'react';
 import { View, Image, ImageSourcePropType } from 'react-native';
 import { scale } from 'react-native-size-matters';
@@ -19,12 +19,12 @@ const RedeemCard = ({ icon, title, body, instruction }: RedeemCardProp) => {
         <Typography variant="h3">
           {title}
         </Typography>
-        <View className='w-8/12'>
-        <Typography color='gray'>
+        <View className="w-8/12">
+        <Typography color="gray">
           {body}
         </Typography>
         </View>
-        <Typography color='#802DFF'>
+        <Typography color="#802DFF">
           {instruction}
         </Typography>
       </View>
