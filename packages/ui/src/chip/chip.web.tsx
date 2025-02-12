@@ -24,7 +24,7 @@ export const Chip = ({ text, applyNeonEffect }: ChipProps) => {
 
   return (
     <div style={chipStyle}>
-      <Typography>{text}</Typography>
+      <p>{text}</p>
     </div>
   );
 };

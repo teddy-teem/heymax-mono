@@ -12,9 +12,16 @@
     },
     "staging": {
       "android": {
-        "buildType": "apk"
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease",
+        "developmentClient": false
+      },
+      "env": {
+        "EXPO_KOTLIN_VERSION": "1.7.20",
+        "EXPO_COMPOSE_COMPILER_VERSION": "1.3.2"
       }
-    }
+    },
+    "production": {}
   },
   "submit": {
     "production": {}

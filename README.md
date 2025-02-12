@@ -1,84 +1,67 @@
-# Turborepo starter
+# Heymax Monorepo
 
-This Turborepo starter is maintained by the Turborepo core team.
+Welcome to the Heymax Monorepo! This repository contains two applications:
 
-## Using this example
+1. **Web Application** - Built with Next.js
+2. **Mobile Application** - Built with Expo (React Native)
 
-Run the following command:
+This monorepo is designed to streamline development and ensure consistency across both platforms. Below are the instructions to set up and run the projects locally.
 
-```sh
-npx create-turbo@latest
-```
+## Prerequisites
 
-## What's inside?
+Before you begin, ensure you have the following installed:
 
-This Turborepo includes the following packages/apps:
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- [Yarn](https://yarnpkg.com/) (v1 or v2)
+- [Expo CLI](https://docs.expo.dev/get-started/installation/) (for the mobile app)
 
-### Apps and Packages
+## Setup
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/heymax-monorepo.git
+    cd heymax-monorepo
+    ```
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+2. **Install dependencies:**
+    ```bash
+    yarn install
+    ```
 
-### Utilities
+## Running the Applications
 
-This Turborepo has some additional tools already setup for you:
+1. **Development Mode**
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+    To run both the web and mobile applications in development mode, use the following command:
 
-### Build
+    ```bash
+    yarn dev
+    ```
 
-To build all apps and packages, run the following command:
+    This will start:
+    - The Next.js web app on http://localhost:3000
+    - The Expo mobile app (you can scan the QR code with the Expo Go app to view it on your device)
 
-```
-cd my-turborepo
-pnpm build
-```
+    **Note:** If QR Code exists, you can use your IP to connect with the following format: `exp://192.168.x.x:8081`
 
-### Develop
+2. **Running Specific Apps**
 
-To develop all apps and packages, run the following command:
+    If you want to run only one of the applications, use the --filter flag:
 
-```
-cd my-turborepo
-pnpm dev
-```
+    #### Web Application (Next.js)
 
-### Remote Caching
+    ```bash
+    yarn dev --filter=web
+    ```
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+    This will start the Next.js web app on http://localhost:3000
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+    #### Mobile Application (Expo)
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
+    ```bash
+    yarn dev --filter=mobile
+    ```
 
-```
-cd my-turborepo
-npx turbo login
-```
+    This will start the Expo mobile app (you can scan the QR code with the Expo Go app to view it on your device)
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+    **Note:** If QR Code exists, you can use your IP to connect with the following format: `exp://192.168.x.x:8081`
