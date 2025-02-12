@@ -8,12 +8,12 @@ export default function Shopping() {
   const [selectedTab, setSelectedTab] = useState(1);
 
   return (
-    <div className="h-full gap-5 flex flex-col mt-10 ml-10">
+    <div className="h-full gap-4 flex flex-col mt-10 ml-10">
       <div className="w-full flex items-center justify-end">
         <NeonCircle value={1} />
         <HorizontalLine />
       </div>
-      <Typography variant="h1">
+      <Typography variant="h1" style={{lineHeight: 1}}>
         Shop your favorite brands, earn miles
       </Typography>
       <div className="ml-10 flex-col">
