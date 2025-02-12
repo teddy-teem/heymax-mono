@@ -12,7 +12,7 @@ const RedeemPage = (): React.ReactNode => {
 
   return (
     <ScrollView className="flex-1 pt-28">
-      <View className="flex-row justify-start items-center">
+      <View className="flex-row justify-start items-center pr-10">
         <HorizontalLine width={width - scale(65)} />
         <NeonCircle value={2} />
       </View>
@@ -22,17 +22,15 @@ const RedeemPage = (): React.ReactNode => {
       <FlashList
         data={REDEEMS}
         renderItem={({ item }) => (
-          <TouchableOpacity>
             <RedeemCard
               icon={item.icon}
               title={item.title}
               body={item.body}
               instruction={item.instruction}
             />
-          </TouchableOpacity>
         )}
-        contentContainerStyle={{ padding: scale(30) }}
-        ItemSeparatorComponent={() => <View className="h-6" />}
+        contentContainerStyle={{ padding: scale(30), }}
+        ItemSeparatorComponent={() => <View className="h-2" />}
       />
     </ScrollView>
   );

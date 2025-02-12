@@ -8,14 +8,14 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "install:packages": "yarn install && yarn workspace web install && yarn workspace mobile install && yarn workspace @heymax/ui install",
-    "start": "concurrently \"yarn workspace web dev\" \"yarn workspace mobile start\"",
+    "start": "concurrently --names \"WEB,MOBILE\" -c \"blue,green\" \"yarn workspace web dev\" \"yarn workspace mobile start\"",
     "clean:modules": "rm -rf node_modules apps/web/node_modules apps/mobile/node_modules packages/ui/node_modules"
   },
   "devDependencies": {
+    "concurrently": "^9.1.2",
     "prettier": "^3.4.2",
     "turbo": "^2.4.0",
-    "typescript": "5.7.3",
-    "concurrently": "^8.0.2"
+    "typescript": "5.7.3"
   },
   "engines": {
     "node": ">=18"

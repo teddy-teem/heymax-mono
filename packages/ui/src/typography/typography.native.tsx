@@ -5,7 +5,7 @@ export const Typography = ({
   variant = 'body',
   children,
   style,
-  color="#FFF"
+  color='#FFF'
 }: TypographyProps) => {
   return (
     <Text style={[styles[variant], style, {color}]}>
