@@ -5,7 +5,7 @@ export interface ChipProps {
   applyNeonEffect?: boolean;
 }
 
-export function Chip({ text, applyNeonEffect }: ChipProps) {
+export const Chip = ({ text, applyNeonEffect }: ChipProps) => {
   const chipStyle = {
     backgroundColor: '#331D61',
     borderRadius: '20px',

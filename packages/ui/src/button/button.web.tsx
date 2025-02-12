@@ -7,7 +7,7 @@ export interface ButtonProps {
   onPress: () => void;
 }
 
-export const Button: React.FC<ButtonProps> = function ({ children, onPress }) {
+export const Button = function ({ children, onPress }:ButtonProps) {
   return (
     <button
       style={{

@@ -1,13 +1,13 @@
-import React, { JSX } from 'react';
+import React, { JSX, ReactNode } from 'react';
 import { TouchableOpacity, StyleSheet } from 'react-native';
 import { COLORS } from '../constants/colors';
 
 export interface ButtonProps {
-  children: JSX.Element | string;
+  children: ReactNode;
   onPress: () => void;
 }
 
-export const Button: React.FC<ButtonProps> = function ({ children, onPress }) {
+export const Button = function ({ children, onPress }: ButtonProps) {
   return (
     <TouchableOpacity style={[styles.container]} onPress={onPress}>
       {children}
