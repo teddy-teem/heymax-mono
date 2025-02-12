@@ -5,7 +5,7 @@ import { scale } from 'react-native-size-matters';
 
 export default function GridView() {
   return (
-    <View className="flex-row justify-start mt-[-10px] flex-wrap gap-2 mr-10">
+    <View className="flex-row justify-start mt-[-10px] flex-wrap gap-2 mr-8">
       {SHOPPING_BRANDS.map((i, index) => (
         <Image
           key={index}

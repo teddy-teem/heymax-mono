@@ -1,42 +1,46 @@
-import { LAST_SCREEN_REDIRECT_URL, ROUTES } from '@heymax/constants';
-import { RelativePathString, Stack, useRouter } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { StatusBar } from 'expo-status-bar';
-import * as WebBrowser from 'expo-web-browser';
-import { useEffect, useState } from 'react';
-import { View } from 'react-native';
-import BottomNavigation from '@/components/BottomNavigation';
-import 'react-native-reanimated';
-import '../global.css';
+import { useEffect, useState } from "react";
+import { StatusBar } from "expo-status-bar";
+import { useFonts } from "expo-font";
+import { RelativePathString, Stack, useRouter } from "expo-router";
+import * as SplashScreen from "expo-splash-screen";
+import * as WebBrowser from "expo-web-browser";
+import { COLORS } from "@heymax/ui";
+import { View, StyleSheet } from "react-native";
+import "react-native-reanimated";
+import "../global.css";
+import BottomNavigation from "@/components/BottomNavigation";
+import { LAST_SCREEN_REDIRECT_URL, ROUTES } from "@heymax/constants";
 
 SplashScreen.preventAutoHideAsync();
 
-const RootLayout = () => {
+const openInAppBrowser = async () => {
+  try {
+    await WebBrowser.openBrowserAsync(LAST_SCREEN_REDIRECT_URL);
+  } catch (error) {
+    console.error("Error opening in-app browser:", error);
+  }
+};
+
+export default function RootLayout() {
   const router = useRouter();
   const [currentRouteDetails, setCurrentRouteDetails] = useState(ROUTES[0]);
-  const [appIsReady, setAppIsReady] = useState(false);
+
+  const [loaded] = useFonts({
+    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
+  });
 
   useEffect(() => {
-    async function prepare() {
-      try {
-        await SplashScreen.preventAutoHideAsync();
-      } catch (e) {
-        // eslint-disable-next-line
-        console.warn(e);
-      } finally {
-        setAppIsReady(true);
-        await SplashScreen.hideAsync();
-      }
+    if (loaded) {
+      SplashScreen.hideAsync();
     }
+  }, [loaded]);
 
-    prepare();
-  }, []);
-
-  if (!appIsReady) {
+  if (!loaded) {
     return null;
   }
 
   const handleNext = () => {
+    console.log(currentRouteDetails?.id);
     switch (currentRouteDetails.route) {
       case ROUTES[0].route:
         router.push(ROUTES[1].route as RelativePathString);
@@ -47,16 +51,16 @@ const RootLayout = () => {
         setCurrentRouteDetails(ROUTES[2]);
         break;
       case ROUTES[2].route:
-        WebBrowser.openBrowserAsync(LAST_SCREEN_REDIRECT_URL);
+        openInAppBrowser();
         break;
       default:
-        router.push(ROUTES[0].route as RelativePathString);
+        router.push("/");
         setCurrentRouteDetails(ROUTES[0]);
     }
   };
 
   return (
-    <View className="flex-1 bg-primary">
+    <View style={styles.container}>
       <Stack
         screenOptions={{
           headerShown: false,
@@ -68,10 +72,10 @@ const RootLayout = () => {
         <Stack.Screen name="+not-found" />
       </Stack>
 
-      <View className="absolute bottom-0 left-0 right-0">
+      <View style={styles.bottomNavigationContainer}>
         <BottomNavigation
           paginationIndex={currentRouteDetails?.id || 0}
-          label={currentRouteDetails?.instruction || ''}
+          label={currentRouteDetails?.instruction || ""}
           onNext={handleNext}
         />
       </View>
@@ -79,7 +83,17 @@ const RootLayout = () => {
       <StatusBar style="light" />
     </View>
   );
-};
+}
 
-
-export default RootLayout;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: COLORS.default.background,
+  },
+  bottomNavigationContainer: {
+    position: "absolute",
+    bottom: 40,
+    left: 0,
+    right: 0,
+  },
+});

@@ -4,7 +4,7 @@ import RedeemPage from '@/screens/RedeemPage';
 
 const Redeem = () => {
   return (
-    <View className="flex-1 items-center justify-center items-center bg-background">
+    <View className="flex flex-col items-center justify-center items-center bg-background">
       <RedeemPage />
     </View>
   );

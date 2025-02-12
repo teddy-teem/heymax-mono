@@ -9,7 +9,7 @@ const { width } = Dimensions.get('screen');
 
 const ShoppingBrands = (): React.ReactNode => {
   return (
-    <ScrollView className="pt-28 pl-10" >
+    <ScrollView className="flex flex-col pt-28 pl-10" >
       <View className="flex-row justify-end items-center">
         <NeonCircle value={1} />
         <HorizontalLine width={width - scale(60)} />

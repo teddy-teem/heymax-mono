@@ -11,11 +11,11 @@ const BrandDetails = (): React.ReactNode => {
     <View className="flex-1 items-center gap-12 mt-32">
       <BrandLogo />
       <UniverseImage />
-      <View className="flex-1 items-center">
+      <View className="flex-1 items-center mt-[-10px]">
         <Typography style={styles.contentHeading1} variant="h1">
           Shop your way to a
         </Typography>
-        <Typography style={styles.contentHeading2} variant="h1">
+        <Typography color={COLORS.default.primary} style={styles.contentHeading2} variant="h1">
           Dream Vacation
         </Typography>
         <Typography style={styles.contentBody} variant="body">

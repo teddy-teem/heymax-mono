@@ -19,21 +19,29 @@ const styles = StyleSheet.create({
     fontFamily: 'Inter',
     fontSize: 36,
     fontWeight: 'bold',
+    display: 'flex',
+    flexWrap: 'wrap'
   },
   h2: {
     fontFamily: 'Inter',
     fontSize: 30,
     fontWeight: 'bold',
+     display: 'flex',
+    flexWrap: 'wrap'
   },
   h3: {
     fontSize: 24,
     fontWeight: 'bold',
     fontFamily: 'Inter',
+     display: 'flex',
+    flexWrap: 'wrap'
   },
   h4: {
     fontSize: 18,
     fontWeight: 'bold',
     fontFamily: 'Inter',
+     display: 'flex',
+    flexWrap: 'wrap'
   },
   body: {
     fontFamily: 'Inter',

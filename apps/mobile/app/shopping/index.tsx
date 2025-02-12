@@ -4,7 +4,7 @@ import ShoppingBrands from '@/screens/ShoppingBrands';
 
 const Shopping = () => {
   return (
-    <View className="flex-1 items-center justify-center items-center bg-background">
+    <View className=" flex-1 items-center justify-center items-center bg-background">
       <ShoppingBrands />
     </View>
   );
