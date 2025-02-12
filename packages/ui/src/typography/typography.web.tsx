@@ -15,6 +15,7 @@ export const Typography = ({
   children,
   style,
   className,
+  color="white"
 }: TypographyProps) => {
   const Tag = variantToTag[variant] as keyof JSX.IntrinsicElements;
 
@@ -23,6 +24,7 @@ export const Typography = ({
       style={{
         fontFamily: 'Arial, sans-serif',
         fontSize: getFontSize(variant),
+        color,
         ...style,
       }}
       className={className}
@@ -40,6 +42,8 @@ const getFontSize = (variant: TypographyProps['variant']) => {
       return '2rem';
     case 'h3':
       return '1.75rem';
+    case 'h4':
+      return '1.2rem';
     case 'body':
       return '1rem';
     case 'caption':

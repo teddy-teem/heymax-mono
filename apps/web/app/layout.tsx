@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import React from 'react';
-import './globals.css';
 import DefaultLayouts from '../features/partials/DefaultLayouts';
-
+import '../styles/globals.css';
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
   variable: '--font-geist-sans',
@@ -26,15 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable}`}
-        style={{
-          width: '100dvw',
-          display: 'flex',
-          height: '100dvh',
-          justifyContent: 'center',
-          alignItems: 'center',
-          backgroundColor: 'white',
-        }}
+        className={`${geistSans.variable} ${geistMono.variable}  flex justify-center bg-white`}
       >
         <DefaultLayouts>{children}</DefaultLayouts>
       </body>

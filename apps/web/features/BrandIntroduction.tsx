@@ -5,9 +5,7 @@ import React from 'react';
 
 export default function BrandIntro() {
   return (
-    <div
-      style={styles.container}
-    >
+    <div className="h-full gap-20 flex flex-col justify-center items-center">
       <Image
         src={'./brand-logo.svg'}
         alt={'brand logo'}
@@ -17,27 +15,22 @@ export default function BrandIntro() {
       <Image
         src={'./universe.svg'}
         alt={'brand logo'}
-        height={400}
-        width={400}
+        height={200}
+        width={200}
+        layout="intrinsic"
+        objectFit="contain"
       />
-      <div
-        style={styles.brandMessageContainer}
-      >
-        <Typography variant="h1" style={{ color: 'white' }}>
-          Shop your way to a
-        </Typography>
-        <Typography variant="h1" style={{ color: COLORS.default.primary }}>
+      <div className="flex flex-col justify-center items-center">
+        <Typography variant="h2">Shop your way to a</Typography>
+        <Typography variant="h2"  color={COLORS.default.primary}>
           Dream Vacation
         </Typography>
         <Typography
           variant="body"
           style={{
-            paddingLeft: 210,
-            paddingRight: 210,
+            paddingLeft: 110,
+            paddingRight: 110,
             textAlign: 'center',
-            marginTop: 20,
-            color: 'white',
-            marginBottom: '20px',
           }}
         >
           Turn your expenses into dream vacations by earning miles every time
@@ -47,33 +40,3 @@ export default function BrandIntro() {
     </div>
   );
 }
-
-
-
-const styles: { [key: string]: React.CSSProperties } = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '80dvh',
-  },
-  brandMessageContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  dot: {
-    height: 8,
-    borderRadius: 10,
-    margin: '0 2px',
-    display: 'inline-block',
-  },
-  buttonChildren: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    gap: 10
-  },
-};

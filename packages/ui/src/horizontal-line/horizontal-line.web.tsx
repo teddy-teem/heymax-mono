@@ -6,7 +6,7 @@ export interface HorizontalLineProps {
 }
 
 export const HorizontalLine: React.FC<HorizontalLineProps> = ({
-  width = '100%',
+  width = '100dvw',
   color = '#802EFF',
 }) => {
   return (

@@ -35,8 +35,6 @@ export const QUICK_ACTIONS = [
   'Shop Online',
   'Book Travel',
   'Order Food',
-  'Order Med',
-  'Trade Online',
 ];
 
 export const SHOPPING_BRANDS = [

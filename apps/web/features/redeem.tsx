@@ -6,15 +6,14 @@ import RedeemCard from '../components/RedeemCard';
 
 export default function Redeem() {
   return (
-    <div style={styles.container}>
-      <div style={styles.line}>
+    <div className="flex flex-col items-center mr-10 mt-12 pb-5 gap-5">
+      <div className="w-full flex flex-row justify-start items-center">
         <HorizontalLine />
         <NeonCircle value={2} />
       </div>
       <Typography
-        variant="h1"
+        variant="h2"
         style={{
-          color: 'white',
           marginRight: 40,
           textAlign: 'right',
           width: '100%',
@@ -22,15 +21,7 @@ export default function Redeem() {
       >
         Redeem your trip
       </Typography>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: 20,
-          marginRight: -80,
-        }}
-      >
+      <div className="flex flex-col items-center gap-5 w-10/12">
         {REDEEMS.map((i) => (
           <RedeemCard
             key={i.id}
@@ -44,35 +35,3 @@ export default function Redeem() {
     </div>
   );
 }
-
-const styles: { [key: string]: React.CSSProperties } = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    height: '90dvh',
-    marginRight: 80,
-    marginTop: 50,
-    paddingBottom: 20,
-    gap: 20,
-  },
-  line: {
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-  },
-  containerStyle: {
-    overflowX: 'auto',
-    whiteSpace: 'nowrap',
-    marginLeft: -40,
-    scrollBehavior: 'smooth',
-    display: 'flex',
-    paddingTop: '10px',
-    paddingBottom: '10px',
-    gap: '12px',
-    msOverflowStyle: 'none',
-    scrollbarWidth: 'none',
-  },
-};
