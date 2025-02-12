@@ -2,7 +2,7 @@
   "extends": "@repo/typescript-config/react-library.json",
   "compilerOptions": {
     "outDir": "dist",
-    "types": ["react", "react-native"],
+    "types": ["react", "react-native", "jest"],
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]

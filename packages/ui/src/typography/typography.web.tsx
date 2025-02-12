@@ -15,7 +15,7 @@ export const Typography = ({
   children,
   style,
   className,
-  color="white"
+  color='white'
 }: TypographyProps) => {
   const Tag = variantToTag[variant] as keyof JSX.IntrinsicElements;
 

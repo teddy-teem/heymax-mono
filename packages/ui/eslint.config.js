@@ -10,6 +10,7 @@ export default [
   {
     ignores: [
       "babel.config.js",
+      "jest.config.js",
       "tailwind.config.js",
       "metro.config.js",
       "next.config.ts",
@@ -21,6 +22,7 @@ export default [
       ".next/",
       ".turbo/",
       ".expo/",
+      "src/button/__tests__/"
     ],
   },
   {
