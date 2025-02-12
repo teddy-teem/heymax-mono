@@ -7,7 +7,7 @@
     },
     "test": {
       "dependsOn": ["^test"],
-      "outputs": []
+      "outputs": ["packages/ui"]
     },
     "build": {
       "dependsOn": ["test", "^build"], 

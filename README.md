@@ -65,3 +65,9 @@ Before you begin, ensure you have the following installed:
     This will start the Expo mobile app (you can scan the QR code with the Expo Go app to view it on your device)
 
     **Note:** If QR Code exists, you can use your IP to connect with the following format: `exp://192.168.x.x:8081`
+
+    ## Unit Test
+    To run test, use the following command
+    ```bash
+    yarn test
+    ```
