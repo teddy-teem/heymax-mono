@@ -4,4 +4,5 @@ export interface TypographyProps {
     children: React.ReactNode;
     style?: React.CSSProperties | object;
     className?: string;
+    color?: string;
   }

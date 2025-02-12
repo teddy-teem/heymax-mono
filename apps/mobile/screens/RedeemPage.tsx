@@ -2,7 +2,7 @@ import { REDEEMS } from '@heymax/constants';
 import { NeonCircle, HorizontalLine, Typography } from '@heymax/ui';
 import { FlashList } from '@shopify/flash-list';
 import React from 'react';
-import { View, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Dimensions, TouchableOpacity, ScrollView } from 'react-native';
 import { scale } from 'react-native-size-matters';
 import RedeemCard from '@/components/RedeemCard';
 
@@ -11,9 +11,9 @@ const { width } = Dimensions.get('screen');
 const RedeemPage = (): React.ReactNode => {
 
   return (
-    <View className="flex-1 mt-32">
-      <View className="flex-row justify-start items-center mr-4">
-        <HorizontalLine width={width - scale(50)} />
+    <ScrollView className="flex-1 pt-28">
+      <View className="flex-row justify-start items-center">
+        <HorizontalLine width={width - scale(65)} />
         <NeonCircle value={2} />
       </View>
       <Typography variant="h2" style={styles.title}>
@@ -34,13 +34,12 @@ const RedeemPage = (): React.ReactNode => {
         contentContainerStyle={{ padding: scale(30) }}
         ItemSeparatorComponent={() => <View className="h-6" />}
       />
-    </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   title: {
-    color: 'white',
     paddingRight: scale(30),
     marginTop: scale(20),
     textAlign: 'right',

@@ -1,11 +1,11 @@
 import { SHOPPING_BRANDS } from '@heymax/constants';
 import React from 'react';
-import { View, Image, StyleSheet } from 'react-native';
+import { View, Image } from 'react-native';
 import { scale } from 'react-native-size-matters';
 
 export default function GridView() {
   return (
-    <View style={styles.container}>
+    <View className="flex-row justify-start mt-[-10px] flex-wrap gap-2 mr-10">
       {SHOPPING_BRANDS.map((i, index) => (
         <Image
           key={index}
@@ -24,13 +24,3 @@ export default function GridView() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
-    flexWrap: 'wrap',
-    gap: scale(10),
-    marginRight: scale(30),
-  },
-});

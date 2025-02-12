@@ -27,7 +27,7 @@ const QuickActions = function () {
 
 const styles = StyleSheet.create({
   scrollViewContainer: {
-    gap: scale(10),
+    gap: scale(5),
     height: 80,
     marginTop: scale(30),
     marginLeft: scale(5),

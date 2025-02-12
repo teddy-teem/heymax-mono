@@ -40,11 +40,11 @@ export const QUICK_ACTIONS = [
 ];
 
 export const SHOPPING_BRANDS = [
-  { url: images.ShopeeImage, height: 104, width: 197 },
+  { url: images.ShopeeImage, height: 104, width: 195 },
   { url: images.LazadaImage, height: 126, width: 110 },
-  { url: images.HnMImage, height: 92, width: 92 },
+  { url: images.HnMImage, height: 90, width: 90 },
   { url: images.FaveImage, height: 92, width: 92 },
   { url: images.MerchantImage, height: 65, width: 110 },
-  { url: images.AmazonSGImage, height: 104, width: 157 },
-  { url: images.FairPriceImage, height: 104, width: 157 },
+  { url: images.AmazonSGImage, height: 104, width: 150 },
+  { url: images.FairPriceImage, height: 104, width: 150 },
 ];

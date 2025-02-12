@@ -1,11 +1,10 @@
 import { LAST_SCREEN_REDIRECT_URL, ROUTES } from '@heymax/constants';
-import { COLORS } from '@heymax/ui';
 import { RelativePathString, Stack, useRouter } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import * as WebBrowser from 'expo-web-browser';
-import { useState } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { useEffect, useState } from 'react';
+import { View } from 'react-native';
 import BottomNavigation from '@/components/BottomNavigation';
 import 'react-native-reanimated';
 import '../global.css';
@@ -15,6 +14,27 @@ SplashScreen.preventAutoHideAsync();
 const RootLayout = () => {
   const router = useRouter();
   const [currentRouteDetails, setCurrentRouteDetails] = useState(ROUTES[0]);
+  const [appIsReady, setAppIsReady] = useState(false);
+
+  useEffect(() => {
+    async function prepare() {
+      try {
+        await SplashScreen.preventAutoHideAsync();
+      } catch (e) {
+        // eslint-disable-next-line
+        console.warn(e);
+      } finally {
+        setAppIsReady(true);
+        await SplashScreen.hideAsync();
+      }
+    }
+
+    prepare();
+  }, []);
+
+  if (!appIsReady) {
+    return null;
+  }
 
   const handleNext = () => {
     switch (currentRouteDetails.route) {
@@ -36,7 +56,7 @@ const RootLayout = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <View className="flex-1 bg-primary">
       <Stack
         screenOptions={{
           headerShown: false,
@@ -48,7 +68,7 @@ const RootLayout = () => {
         <Stack.Screen name="+not-found" />
       </Stack>
 
-      <View style={styles.bottomNavigationContainer}>
+      <View className="absolute bottom-0 left-0 right-0">
         <BottomNavigation
           paginationIndex={currentRouteDetails?.id || 0}
           label={currentRouteDetails?.instruction || ''}
@@ -61,17 +81,5 @@ const RootLayout = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLORS.default.background,
-  },
-  bottomNavigationContainer: {
-    position: 'absolute',
-    bottom: 40,
-    left: 0,
-    right: 0,
-  },
-});
 
 export default RootLayout;

@@ -13,7 +13,7 @@ export interface RedeemCardProp {
 const RedeemCard = ({ icon, title, body, instruction }: RedeemCardProp) => {
   
   return (
-    <View className="flex-row items-center rounded-xl p-6 gap-2 bg-[#1C0E4B]">
+    <View className="flex-row items-center rounded-xl px-4 py-3 gap-2 bg-[#1C0E4B]">
       <Image source={icon} style={{ height: scale(60), width: scale(60) }} />
       <View className="flex-col w-9/12 gap-3">
         <Typography variant="h3" style={{ color: 'white' }}>
